@@ -16,7 +16,7 @@ fn main() {
 
         let line_diff = content.lines().count() - content_old.lines().count();
         let old_lines = content.lines().count() - line_diff;
-        // only print new lines
+        // only print new lines (skip number of previous lines)
         content
             .lines()
             .skip(old_lines)
